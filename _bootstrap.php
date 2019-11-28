@@ -19,13 +19,13 @@
 error_reporting('all');
 
 // pull environment vars
-$merchantId = getenv('GATEWAY_MERCHANT_ID');
-$password = getenv('GATEWAY_API_PASSWORD');
-$region = getenv('GATEWAY_REGION');
+//$merchantId = getenv('GATEWAY_MERCHANT_ID');
+//$password = getenv('GATEWAY_API_PASSWORD');
+//$region = getenv('GATEWAY_REGION');
 $apiVersion = getenv('GATEWAY_API_VERSION');
 
 
-// get regional url prefix
+/* get regional url prefix
 $prefix = 'test-';
 if (strcasecmp($region, "ASIA_PACIFIC") == 0) {
     $prefix = 'ap-';
@@ -40,14 +40,17 @@ if (strcasecmp($region, "ASIA_PACIFIC") == 0) {
 } else {
     error(500, "Invalid region provided. Valid values include ASIA_PACIFIC, EUROPE, NORTH_AMERICA, MTF");
 }
-
+*/
+    
 // validate apiVersion is above minimum
 if (intval($apiVersion) < 39) {
     error(500, "API Version must be >= 39");
 }
 
 // build api endpoint url
-$gatewayUrl = "https://${prefix}gateway.mastercard.com/api/rest/version/${apiVersion}/merchant/${merchantId}";
+    $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/53/merchant/TYRO_318";
+    
+// $gatewayUrl = "https://${prefix}gateway.mastercard.com/api/rest/version/${apiVersion}/merchant/${merchantId}";
 
 // parse query string
 $query = array();
@@ -56,7 +59,7 @@ parse_str($_SERVER['QUERY_STRING'], $query);
 // build auth headers
 $headers = array(
     'Content-type: application/json',
-    'Authorization: Basic ' . base64_encode("merchant.$merchantId:$password")
+    'Authorization: Basic ' . base64_encode("merchant.TYRO_318:e627bccdeba510cd6be5f0745c3f7091")
 );
 
 // construct page url
