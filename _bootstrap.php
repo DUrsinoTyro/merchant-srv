@@ -43,7 +43,7 @@ if (strcasecmp($region, "ASIA_PACIFIC") == 0) {
 */
     
 // build api endpoint url
-    $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/53/merchant/TYRO_440";
+    $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/54/merchant/TYRO_440";
     
 // $gatewayUrl = "https://${prefix}gateway.mastercard.com/api/rest/version/${apiVersion}/merchant/${merchantId}";
 
