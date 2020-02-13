@@ -58,9 +58,6 @@ Payload:
     },
     "sourceOfFunds": {
     	"type": "CARD"
-    },
-    "transaction": {
-    	"frequency": "SINGLE"
     }
 }</code></pre>
 
