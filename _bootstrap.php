@@ -42,11 +42,6 @@ if (strcasecmp($region, "ASIA_PACIFIC") == 0) {
 }
 */
     
-// validate apiVersion is above minimum
-if (intval($apiVersion) < 39) {
-    error(500, "API Version must be >= 39");
-}
-
 // build api endpoint url
     $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/53/merchant/TYRO_440";
     
