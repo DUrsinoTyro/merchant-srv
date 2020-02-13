@@ -48,7 +48,7 @@ if (intval($apiVersion) < 39) {
 }
 
 // build api endpoint url
-    $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/53/merchant/TYRO_318";
+    $gatewayUrl = "https://test-tyro.mtf.gateway.mastercard.com/api/rest/version/53/merchant/TYRO_440";
     
 // $gatewayUrl = "https://${prefix}gateway.mastercard.com/api/rest/version/${apiVersion}/merchant/${merchantId}";
 
@@ -59,7 +59,7 @@ parse_str($_SERVER['QUERY_STRING'], $query);
 // build auth headers
 $headers = array(
     'Content-type: application/json',
-    'Authorization: Basic ' . base64_encode("merchant.TYRO_318:e627bccdeba510cd6be5f0745c3f7091")
+    'Authorization: Basic ' . base64_encode("merchant.TYRO_440:1488d33bbbcd25d5ca0ca491aa14b9dd")
 );
 
 // construct page url
